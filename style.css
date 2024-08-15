@@ -1,0 +1,135 @@
+:root {
+    --color-strong-cyan:  hsl(172, 67%, 45%);
+    --color-very-dark-cyan:   hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan:hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    background-color: var(--color-light-grayish-cyan);
+}
+body {
+    font-family: "Space Mono", sans-serif;
+    color: var(--color-dark-grayish-cyan);
+}
+h1{
+    text-align: center;
+    margin-top: 5rem;
+    letter-spacing: 4px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    padding: 3.2rem;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.bill-amount-section label,
+.people-number-section label{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+.bill-amount-section input,
+.people-number-section input{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    background-color: var(--color-very-light-grayish-cyan);
+    border-radius: 9px;
+}
+.bill-amount-section input::placeholder{
+    color: var(--color-grayish-cyan);
+}
+.tip-section p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+}
+.btn{
+    background-color: var(--color-very-dark-cyan);
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem 3.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}  
+.custom{
+    background-color: var(--color-very-light-grayish-cyan);
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem 3.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+    width: 100%;
+}  
+.total-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-very-dark-cyan);
+    border-radius: 20px;
+    padding: 2.4rem;
+}
+.totals{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.totals p{
+    font-size: 1.8rem;
+    color: var(--color-white);
+}
+.totals .amounts{
+    text-align: right;
+    color:var(--color-strong-cyan);
+    font-size: 2.4rem;
+}
+.totals .per-person{
+    font-size: 1.2rem;
+    color: var(--color-grayish-cyan);
+}
+.btn-reset{
+    background-color: var(--color-strong-cyan);
+    color: var(--color-very-dark-cyan);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem 3.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}  
