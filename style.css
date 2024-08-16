@@ -99,26 +99,34 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 2.4rem;
     background-color: var(--color-very-dark-cyan);
     border-radius: 20px;
     padding: 2.4rem;
 }
-.totals{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* .totals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+ .tip-amount{
+    margin-bottom: 1.6rem;
+ }
+.tip-amount,
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.totals p{
-    font-size: 1.8rem;
+.tip-amount p,
+.total p{
+    font-size: 1.6rem;
     color: var(--color-white);
 }
-.totals .amounts{
-    text-align: right;
-    color:var(--color-strong-cyan);
+.tip-amount .amounts,
+.total .amounts{
+    color: var(--color-strong-cyan);
     font-size: 2.4rem;
-}
-.totals .per-person{
-    font-size: 1.2rem;
-    color: var(--color-grayish-cyan);
 }
 .btn-reset{
     background-color: var(--color-strong-cyan);
@@ -133,3 +141,23 @@ h1{
     cursor: pointer;
     font-family: inherit;
 }  
+@media(min-width:48em){
+    .main{
+        padding: 10rem 20rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .two-column-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .total-section{
+        justify-content: space-between;
+        padding-top: 4.8rem;
+    }
+    .tip-amount{
+        margin-bottom: 3.2rem;
+    }
+}
