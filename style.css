@@ -85,6 +85,10 @@ h1{
     cursor: pointer;
     font-family: inherit;
 }  
+.btn:hover, 
+.btn:active{
+    background-color: var(--color-strong-cyan);
+}
 .custom{
     background-color: var(--color-very-light-grayish-cyan);
     color: var(--color-white);
@@ -143,6 +147,10 @@ h1{
     cursor: pointer;
     font-family: inherit;
 }  
+.btn-reset:hover,
+.btn-reset:active{
+    background-color: var(--color-light-grayish-cyan);
+}
 @media(min-width:48em){
     .main{
         padding: 5rem 30rem;
