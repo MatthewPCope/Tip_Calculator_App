@@ -57,6 +57,21 @@ h1{
     border: none;
     background-color: var(--color-very-light-grayish-cyan);
     border-radius: 9px;
+    
+}
+.bill-amount-section input{
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.people-number-section input{
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.bill-amount-section input::placeholder,
+.people-number-section input{
+    text-align: right;
 }
 .bill-amount-section input::placeholder{
     color: var(--color-grayish-cyan);
@@ -91,7 +106,7 @@ h1{
 }
 .custom{
     background-color: var(--color-very-light-grayish-cyan);
-    color: var(--color-white);
+    color: var(--color-dark-grayish-cyan);
     font-size: 2rem;
     font-weight: 600;
     padding: .5rem 3.2rem;
