@@ -57,7 +57,6 @@ h1{
     border: none;
     background-color: var(--color-very-light-grayish-cyan);
     border-radius: 9px;
-    
 }
 .bill-amount-section input{
     background-image: url('images/icon-dollar.svg');
