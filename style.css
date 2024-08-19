@@ -26,12 +26,12 @@ h1{
     letter-spacing: 4px;
     margin-bottom: 4rem;
 }
-.main{
+/* .main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 .container{
     width: 100%;
     padding: 3.2rem;
@@ -41,6 +41,11 @@ h1{
     flex-direction: column;
     gap: 2.4rem;
 }
+.two-column-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
 .bill-amount-section label,
 .people-number-section label{
     display: block;
@@ -125,6 +130,17 @@ h1{
 .btn:active{
     background-color: var(--color-strong-cyan);
 }
+.btns input{
+    border: 2px solid transparent;
+    text-align: right
+}
+.btns input:focus{
+    outline: none;
+    border-color: var(--color-strong-cyan);
+}
+.btns input::placeholder{
+    text-align: center;
+}
 .custom{
     background-color: var(--color-very-light-grayish-cyan);
     color: var(--color-dark-grayish-cyan);
@@ -133,7 +149,6 @@ h1{
     padding: .5rem 3.2rem;
     border-radius: 10px;
     text-decoration: none;
-    border: none;
     font-family: inherit;
     width: 100%;
 }  
@@ -151,9 +166,9 @@ h1{
     justify-content: space-between;
     align-items: center;
 } */
- .tip-amount{
+.tip-amount{
     margin-bottom: 1.6rem;
- }
+}
 .tip-amount,
 .total{
     display: flex;
@@ -187,7 +202,8 @@ h1{
 .btn-reset:active{
     background-color: var(--color-light-grayish-cyan);
 }
-@media(min-width:48em){
+@media(min-width:68.75em){
+
     .main{
         padding: 5rem 30rem;
         display: flex;
@@ -198,11 +214,7 @@ h1{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .two-column-grid{
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-    }
+    
     .total-section{
         justify-content: space-between;
         padding-top: 4.8rem;

@@ -61,6 +61,17 @@ customTipInput.addEventListener('input', () => {
         calculateTip(customTip);
     }
 });
+// Function to remove placeholder on focus
+customTipInput.addEventListener('focus', () => {
+    customTipInput.placeholder = '';
+});
+
+// Function to restore placeholder on blur (when input loses focus)
+customTipInput.addEventListener('blur', () => {
+    if (customTipInput.value === '') {
+        customTipInput.placeholder = 'Custom';
+    }
+});
 
 // Event listener for the reset button to clear input and errors
 resetButton.addEventListener('click', () => {
