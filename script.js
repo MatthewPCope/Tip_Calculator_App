@@ -4,15 +4,36 @@ const ten = document.querySelector('#ten');
 const fifteen = document.querySelector('#fifteen');
 const twentyFive = document.querySelector('#twenty-five');
 const fifty = document.querySelector('#fifty');
+
 const customTipInput = document.querySelector('.custom');
 const billInput = document.querySelector('#bill');
-const peopleInput = document.querySelector('.people-number-section input');
+const peopleInput = document.querySelector('#people');
+const peopleError = document.querySelector('#people-error')
 const resetButton = document.querySelector('.btn-reset');
 const tipAmountDisplay = document.querySelector('.tip-amount .amounts');
 const totalAmountDisplay = document.querySelector('.total .amounts');
 
+function validatePeopleInput() {
+    const peopleValue = parseInt(peopleInput.value);
+    if (isNaN(peopleValue) || peopleValue <= 0) {
+        peopleError.style.display = 'block'; // Show error message
+        peopleInput.classList.add('error'); // Add error class to change border color to red
+        return false; // Validation failed
+    } else {
+        peopleError.style.display = 'none'; // Hide error message
+        peopleInput.classList.remove('error'); // Remove error class
+        return true; // Validation passed
+    }
+}
+// Validate on input blur (when focus is lost) and form submission
+peopleInput.addEventListener('blur', validatePeopleInput);
+
 // Function to calculate the tip and total amount per person
 function calculateTip(tipPercentage) {
+    if (!validatePeopleInput()) {
+        return; // Stop if validation fails
+    }
+
     const bill = parseFloat(billInput.value);
     const people = parseInt(peopleInput.value);
     if (isNaN(bill) || isNaN(people) || people <= 0) {
@@ -41,11 +62,13 @@ customTipInput.addEventListener('input', () => {
     }
 });
 
-// Event listener for the reset button
+// Event listener for the reset button to clear input and errors
 resetButton.addEventListener('click', () => {
     billInput.value = '';
     peopleInput.value = '';
     customTipInput.value = '';
     tipAmountDisplay.textContent = '$0.00';
     totalAmountDisplay.textContent = '$0.00';
+    peopleError.style.display ="none" // Hide error message
+    peopleInput.classList.remove('error') //remove error class
 });

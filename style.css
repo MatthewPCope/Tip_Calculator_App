@@ -50,19 +50,25 @@ h1{
 .bill-amount-section input,
 .people-number-section input{
     width: 100%;
-    padding: 1.2rem;
+    padding: 1rem;
     font-size: 1.8rem;
     color: inherit;
     font-family: inherit;
     border: none;
     background-color: var(--color-very-light-grayish-cyan);
     border-radius: 10px;
+    border: 2px solid transparent;
 }
 .bill-amount-section input{
     background-image: url('images/icon-dollar.svg');
     background-repeat: no-repeat;
     background-position: 10px center;
     text-align: right;
+}
+.bill-amount-section input:focus,
+.people-number-section input:focus{
+    outline: none;
+    border-color: var(--color-strong-cyan);
 }
 .people-number-section input{
     background-image: url('images/icon-person.svg');
@@ -73,6 +79,21 @@ h1{
 .people-number-section input{
     text-align: right;
 }
+.people-number-section input.error{
+    border-color: red;
+}
+.label-and-error {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+.error-message{
+    color: red;;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-left: auto;
+}
+
 .bill-amount-section input::placeholder{
     color: var(--color-grayish-cyan);
 }
