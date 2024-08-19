@@ -62,6 +62,7 @@ h1{
     background-image: url('images/icon-dollar.svg');
     background-repeat: no-repeat;
     background-position: 10px center;
+    text-align: right;
 }
 .people-number-section input{
     background-image: url('images/icon-person.svg');
@@ -179,6 +180,7 @@ h1{
     .two-column-grid{
         display: flex;
         flex-direction: column;
+        gap: 2.4rem;
     }
     .total-section{
         justify-content: space-between;
